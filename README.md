@@ -1,14 +1,14 @@
 # vllm_monitor
 A simple script that monitors via SSH/tmux the Avg. Generation Tokens and the % Acceptance Rate for speculative models.
 
-#Pre-Reqs & Assumptions:
+# Pre-Reqs & Assumptions:
 - It assumes you're running this over ssh to a remote server (can be localhost, though)
 - You must have tmux installed as you'll want to launch your vllm session interactively inside the tmux
 - - This is just for the sake to better handle the connection to the host and the lcg. I can (and I'm doing it for some models as well) extrack a 'docker logs -f vllm-node' but people build them with different names or launch them with launchers with -d and there are too many scenarios to cover, just install tmux, create a new session named 'vllm' (tmux new -s vllm) and launch your vllm there
 - SSHPASS is used with -e to pass your ssh password. Please set this variable before launching this script (export SSHPASS=xxxx)
 - I'm assuming You know I vibe-coded this and I will provide no warranty :)
 
-#What it does:
+# What it does:
 It monitors the output logs from vllm and looks for two parameters:
   - Avg. Draft Acceptance Rate
   - Avg. Generation Throughput
