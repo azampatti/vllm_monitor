@@ -36,7 +36,7 @@ SSH_HOST=""
 USER=""
 
 # vLLM API settings (optional)
-VLLM_URL="http://vllm.local:8000"                   # vLLM API URL (e.g., http://<host>:8000)
+VLLM_URL="http://vllm:8000"                   # vLLM API URL (e.g., http://<host>:8000)
 
 # Display settings
 MAX_BAR_LEN=40                  # Length of progress bar in characters
